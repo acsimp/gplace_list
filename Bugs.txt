@@ -1,0 +1,17 @@
+PLACE
+-------
+
+HOME/LIST
+---------
+drop down category select does not work
+
+
+AXIOS
+---------
+try parsing data
+
+
+google places API AIzaSyDPksCCWK-V4OMUqEFkA5K4zvfFhJuV3C8
+
+cant find the correct ikea on facebook
+how to filter out fake facebook places

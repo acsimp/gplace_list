@@ -1,0 +1,27 @@
+<h1>Google Places API</h1>
+<div class="grid">
+
+         <% var i; %>
+<%for (i = 0; i < place.candidates.length; i++) { %>
+
+                 
+
+        <!--<div class="col-md-4 col-sm-6">-->
+        <div class="item">
+              <div class="content card mb-4 box-shadow">
+                <a href="g-place/<%= place.candidates[i].place_id %>"> 
+                        <img class="card-img-top" height="150" src="https://uploads-ssl.webflow.com/57e5747bd0ac813956df4e96/5aebae14c6d254621d81f826_placeholder.png">
+                    <br/>
+                <%= place.candidates[i].name %></a><br/>
+                Google ID: <%= place.candidates[i].place_id %><br/>
+                Address: <%= place.candidates[i].formatted_address %><br/>
+                Geo: <%= place.candidates[i].geometry.location.lat + ", " + place.candidates[i].geometry.location.lng %><br/>
+                <br/>
+              </div>
+            </div>
+    <%// }); %>
+<% } %>
+<br/>
+ <!--<a href="<%= //place.paging.next %>"> next </a>-->
+       
+    </div>

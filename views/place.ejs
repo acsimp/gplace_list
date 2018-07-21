@@ -1,0 +1,91 @@
+<h1>Facebook Graph API</h1>
+<p style="width:300px; margin-left:auto; margin-right:auto; ">
+<% if (place.photos) { %>
+<img src="<%= place.photos.data[0].images[0].source %>" alt="Smiley face" height="300" width=""><br/>
+<% } else {%>
+<% if (place.picture) { %>
+<img src="<%= place.picture.data.url %>" alt="Smiley face" height="" width=""><br/>
+<% } } %>
+<br/>
+Name: <%= place.name %><br/>
+<% if (place.about) { %>
+About: <%= place.about %><br/>
+<% } %>
+<% if (place.description) { %>
+Description: <%= place.description %><br/>
+<% } %>
+<br/>
+Category: <%= place.category_list[0].name %><br/>
+<% if (place.restaurant_specialties) { %>
+Restaurant Specialities: <%= place.restaurant_specialties %><br/>
+<% } %>
+<% if (place.restaurant_services) { %>
+Restaurant Services<br/>
+delivery: <%= place.restaurant_services.delivery %><br/>x
+catering: <%= place.restaurant_services.catering %><br/>
+groups: <%= place.restaurant_services.groups %><br/>
+kids: <%= place.restaurant_services.kids %><br/>
+outdoor: <%= place.restaurant_services.outdoor %><br/>
+reserve: <%= place.restaurant_services.reserve %><br/>
+takeout: <%= place.restaurant_services.takeout %><br/>
+waiter: <%= place.restaurant_services.waiter %><br/>
+walkins: <%= place.restaurant_services.walkins %><br/>
+<% } %>
+<br/>
+<% if (place.emails) { %>
+Email: <%= place.emails[0].value %><br/>
+<% } %>
+Phone: <%= place.phone %><br/>
+Facebook: 
+<a href="<%= place.link %>">Facebook</a><br/>
+
+<% if (place.website) { %>
+Website: 
+<a href="<%= place.website %>">Website</a><br/>
+<% } %>
+ID: <%= place.id %><br/>
+
+
+<br/>
+Likes: <%= place.engagement.social_sentence + " (" + place.engagement.count + ")" %><br/>
+Checkins: <%= place.checkins %><br/>
+Rating: <%= place.overall_star_rating + " (" + place.rating_count + ")"%><br/>
+<br/>
+<%= place.location.street %><br/>
+<%= place.location.city %><br/>
+<%= place.location.zip %><br/>
+<%= place.location.country %><br/>
+long: <%= place.location.longitude %><br/>
+Lat: <%= place.location.latitude %><br/>
+<br/>
+<% if (place.price_range) { %>
+Price range: <%= place.price_range %><br/>
+<% } %>
+<br/>
+
+<% if (place.hours) { %>
+Opening Hours <br/>
+ <% var i,j,k; %>
+ <% var days =["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]; %>
+<%for (i = 0, j=1, k=0; i < place.hours.length; i+=2, j+=2, k++) { %>
+<%= days[k] + " " + place.hours[i].value + " - " + place.hours[j].value %><br/>
+<% } %>
+<br/>
+<% } %>
+
+<% if (place.parking) { %>
+Parking: <%= place.parking %><br/><br/>
+<% } %>
+<br/>
+<% if (place.is_permanently_closed) { %>
+Parking: <%= place.is_permanently_closed %><br/><br/>
+<% } %>
+<% if (place.cover) { %>
+<img src="<%= place.cover.source %>" alt="Smiley face" width="300"><br/>
+<% } %>
+
+
+</p>
+
+
+<!--about,location,checkins,name,parking,link,rating_count,overall_star_rating,description,website,phone,photos{album},hours,engagement,restaurant_specialties,restaurant_services,price_range,single_line_address,is_verified,picture{url}-->

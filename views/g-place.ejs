@@ -1,0 +1,17 @@
+<h1>Google Places API</h1>
+<p style="width:300px; margin-left:auto; margin-right:auto; ">
+
+<br/>
+Name: <%= place.result.name %><br/>
+Address: <%= place.result.formatted_address %><br/>
+Geo: <%= place.result.geometry.location.lat + ", " + place.result.geometry.location.lat %><br/>
+ID: <%= place.result.place_id %><br/>
+Google URL: <a href="<%= place.result.url %>">Link</a><br/>
+
+
+ <a href="/fb-result?q=<%= place.result.name %>&latitude=<%= place.result.geometry.location.lat %>&longitude=<%= place.result.geometry.location.lng %> ">Search facebook Places Graph</a> 
+
+</p>
+
+
+<!--about,location,checkins,name,parking,link,rating_count,overall_star_rating,description,website,phone,photos{album},hours,engagement,restaurant_specialties,restaurant_services,price_range,single_line_address,is_verified,picture{url}-->

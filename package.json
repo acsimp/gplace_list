@@ -1,0 +1,20 @@
+{
+  "name": "gplace-test",
+  "version": "1.0.0",
+  "description": "This example demonstrates how to use [Express](http://expressjs.com/) 4.x and [Passport](http://passportjs.org/) to authenticate users using Facebook.  Use this example as a starting point for your own web applications.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Andrew Simpson",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dotenv": "^6.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2"
+  }
+}
